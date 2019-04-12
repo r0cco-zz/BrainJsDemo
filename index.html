@@ -10,24 +10,26 @@
       <h1>BrainJsDemo</h1>
       <h3>Enter a tweet by Kim Kardashian or Donald Trump and see if the demo can tell who wrote it!</h3>
       <input id="userInput" type="text" placeholder="Paste a Trump or Kim K tweet here!">
-      <button id="Submitbtn" onclick="execute(document.getElementById('userInput').value)">Submit</button>
+      <button id="Submitbtn" onclick="hideAll();execute(document.getElementById('userInput').value);">Submit</button>
     </div>
     <div class="row">
       <div id="kimKResult" style="display: none">
         <div class="row">
-          <img src="https://pbs.twimg.com/profile_images/994943919371706368/QTyfb7-M_200x200.jpg" style="width: 200px; height: 200px;">
+          <img src="https://wtop.com/wp-content/uploads/2019/04/People-Kim_Kardashian_West_71579-1024x714.jpg" style="width: 200px; height: 200px;">
         </div>
         <div>
           <h3>This tweet was (probably) written by Kim K!</h3>
         </div>
+		<div id="kimKText"></div>
       </div>
-      <div id="tossupResult" style="display: none">
+      <div id="tossUpResult" style="display: none">
           <div class="row">
               <img src="http://themidult.com/wp-content/uploads/2017/10/inconceivable-wallace-shawn-princess-bride.jpg" style="width: 200px; height: 200px;">
             </div>
             <div>
               <h3>Inconceivable! This tweet is a total toss-up!</h3>
             </div>
+			<div id="tossUpText"></div>
       </div>
       <div id="trumpResult" style="display: none">
           <div class="row">
@@ -36,6 +38,7 @@
             <div>
               <h3>This tweet was (probably) written by Trump!</h3>
             </div>
+			<div id="trumpText"></div>
       </div>
     </div> 
     <div class="row">
